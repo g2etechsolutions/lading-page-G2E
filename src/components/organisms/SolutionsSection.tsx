@@ -1,4 +1,8 @@
+'use client'
+
 import SectionHeading from '@/components/atoms/SectionHeading'
+import ScrollReveal from '@/components/atoms/ScrollReveal'
+import StaggerContainer, { StaggerItem } from '@/components/atoms/StaggerContainer'
 import ServiceCard from '@/components/molecules/ServiceCard'
 
 const services = [
@@ -32,16 +36,20 @@ export default function SolutionsSection() {
   return (
     <section id="solucoes" className="relative py-24 md:py-32">
       <div className="mx-auto max-w-7xl px-6">
-        <SectionHeading label="O que entregamos">
-          Soluções completas para{' '}
-          <span className="text-gradient-brand">cada etapa da sua jornada</span>
-        </SectionHeading>
+        <ScrollReveal>
+          <SectionHeading label="O que entregamos">
+            Soluções completas para{' '}
+            <span className="text-gradient-brand">cada etapa da sua jornada</span>
+          </SectionHeading>
+        </ScrollReveal>
 
-        <div className="grid md:grid-cols-2 gap-6">
+        <StaggerContainer className="grid md:grid-cols-2 gap-6" staggerDelay={0.15}>
           {services.map((service) => (
-            <ServiceCard key={service.title} {...service} />
+            <StaggerItem key={service.title}>
+              <ServiceCard {...service} />
+            </StaggerItem>
           ))}
-        </div>
+        </StaggerContainer>
       </div>
     </section>
   )

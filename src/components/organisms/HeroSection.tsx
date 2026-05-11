@@ -1,3 +1,6 @@
+'use client'
+
+import { motion } from 'framer-motion'
 import Button from '@/components/atoms/Button'
 import GradientText from '@/components/atoms/GradientText'
 import CityVisual from '@/components/molecules/CityVisual'
@@ -14,32 +17,57 @@ export default function HeroSection() {
         {/* Left: Copy */}
         <div>
           {/* Badge */}
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-primary/30 bg-primary/5 text-xs font-semibold text-primary mb-6 tracking-widest uppercase">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-primary/30 bg-primary/5 text-xs text-primary mb-6"
+          >
             <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse" />
             Dados · Estratégia · Tecnologia
-          </div>
+          </motion.div>
 
-          <h1 className="font-display text-4xl md:text-6xl font-bold tracking-tight leading-[1.08]">
+          <motion.h1
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="font-display text-4xl md:text-6xl font-bold tracking-tight leading-[1.05]"
+          >
             Transformamos negócios com{' '}
             <GradientText>dados, estratégia e tecnologia</GradientText>
-          </h1>
+          </motion.h1>
 
-          <p className="mt-6 text-lg text-on-surface max-w-xl leading-relaxed">
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.4 }}
+            className="mt-6 text-lg text-on-surface-muted max-w-xl"
+          >
             Inovação, inteligência de dados e automação estratégica para empresas que constroem o futuro — com escalabilidade real.
-          </p>
+          </motion.p>
 
           {/* CTAs */}
-          <div className="mt-10 flex flex-wrap gap-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.6 }}
+            className="mt-10 flex flex-wrap gap-4"
+          >
             <Button variant="cta" href="#contato">
               Fale com um Especialista →
             </Button>
             <Button variant="outline" href="#solucoes">
               Conheça Nossas Soluções
             </Button>
-          </div>
+          </motion.div>
 
           {/* Stats */}
-          <div className="mt-12 grid grid-cols-3 gap-6 max-w-md">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.8 }}
+            className="mt-12 grid grid-cols-3 gap-6 max-w-md"
+          >
             {[
               { value: '+120', label: 'Projetos entregues' },
               { value: '98%', label: 'Clientes satisfeitos' },
@@ -50,15 +78,19 @@ export default function HeroSection() {
                 <div className="text-xs text-on-surface-muted mt-1">{stat.label}</div>
               </div>
             ))}
-          </div>
+          </motion.div>
         </div>
 
         {/* Right: City Visual */}
-        <div className="relative animate-float">
-          {/* Glow behind */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.8, delay: 0.3 }}
+          className="relative animate-float"
+        >
           <div className="absolute inset-0 bg-primary/15 blur-[80px] rounded-full" />
           <CityVisual />
-        </div>
+        </motion.div>
       </div>
     </section>
   )

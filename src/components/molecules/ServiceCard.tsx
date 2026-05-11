@@ -1,15 +1,21 @@
+'use client'
+
+import { motion } from 'framer-motion'
 import Icon from '@/components/atoms/Icon'
 
 interface ServiceCardProps {
   icon: string
   title: string
   description: string
-  highlight?: string
 }
 
 export default function ServiceCard({ icon, title, description }: ServiceCardProps) {
   return (
-    <div className="glass-card hover:glass-card-hover group rounded-2xl p-8">
+    <motion.div
+      whileHover={{ y: -4 }}
+      transition={{ duration: 0.3 }}
+      className="glass-card hover:glass-card-hover group rounded-2xl p-8 cursor-default"
+    >
       <div className="w-14 h-14 rounded-xl border border-primary/40 bg-primary/5 flex items-center justify-center mb-6 group-hover:shadow-glow transition-all">
         <Icon name={icon} className="text-primary" size={26} />
       </div>
@@ -19,6 +25,6 @@ export default function ServiceCard({ icon, title, description }: ServiceCardPro
         Saiba mais
         <Icon name="arrow_forward" size={16} />
       </a>
-    </div>
+    </motion.div>
   )
 }

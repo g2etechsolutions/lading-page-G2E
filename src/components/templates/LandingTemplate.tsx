@@ -3,6 +3,7 @@ import HeroSection from '@/components/organisms/HeroSection'
 import SocialProofSection from '@/components/organisms/SocialProofSection'
 import SolutionsSection from '@/components/organisms/SolutionsSection'
 import WhyUsSection from '@/components/organisms/WhyUsSection'
+import TechStackSection from '@/components/organisms/TechStackSection'
 import ProcessSection from '@/components/organisms/ProcessSection'
 import CtaSection from '@/components/organisms/CtaSection'
 import FooterSection from '@/components/organisms/FooterSection'
@@ -16,6 +17,7 @@ export default function LandingTemplate() {
         <SocialProofSection />
         <SolutionsSection />
         <WhyUsSection />
+        <TechStackSection />
         <ProcessSection />
         <CtaSection />
       </main>
