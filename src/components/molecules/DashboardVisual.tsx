@@ -10,7 +10,7 @@ export default function DashboardVisual() {
         <div className="flex gap-2">
           <div className="w-8 h-8 rounded-full bg-surface-variant" />
           <div className="w-8 h-8 rounded-full bg-tertiary/20 text-tertiary flex items-center justify-center">
-            <Icon name="notifications" className="text-sm" />
+            <Icon name="notifications" size={16} />
           </div>
         </div>
       </div>
@@ -18,19 +18,19 @@ export default function DashboardVisual() {
       <div className="relative z-10 grid grid-cols-3 gap-4 mb-4">
         <div className="h-24 bg-surface-variant/50 rounded-xl border border-outline-variant/20 p-4 flex flex-col justify-between group-hover:border-tertiary/30 transition-colors">
           <div className="w-8 h-8 rounded bg-tertiary/10 flex items-center justify-center mb-2">
-            <Icon name="speed" className="text-tertiary text-sm" />
+            <Icon name="speed" className="text-tertiary" size={16} />
           </div>
           <div className="w-1/2 h-3 bg-tertiary rounded" />
         </div>
         <div className="h-24 bg-surface-variant/50 rounded-xl border border-outline-variant/20 p-4 flex flex-col justify-between group-hover:border-tertiary/30 transition-colors">
           <div className="w-8 h-8 rounded bg-secondary/10 flex items-center justify-center mb-2">
-            <Icon name="memory" className="text-secondary text-sm" />
+            <Icon name="memory" className="text-secondary" size={16} />
           </div>
           <div className="w-2/3 h-3 bg-secondary rounded" />
         </div>
         <div className="h-24 bg-surface-variant/50 rounded-xl border border-outline-variant/20 p-4 flex flex-col justify-between group-hover:border-tertiary/30 transition-colors">
           <div className="w-8 h-8 rounded bg-tertiary/10 flex items-center justify-center mb-2">
-            <Icon name="security" className="text-tertiary text-sm" />
+            <Icon name="security" className="text-tertiary" size={16} />
           </div>
           <div className="w-3/4 h-3 bg-tertiary rounded" />
         </div>

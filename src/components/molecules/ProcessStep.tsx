@@ -22,8 +22,8 @@ export default function ProcessStep({ number, icon, title, description, active =
         </div>
         <Icon
           name={icon}
-          fill
-          className={`text-4xl ${active ? 'text-tertiary' : 'text-on-surface-variant'}`}
+          className={active ? 'text-tertiary' : 'text-on-surface-variant'}
+          size={36}
         />
       </div>
       <h3 className="font-headline-lg-mobile text-2xl text-on-background mb-3">{title}</h3>

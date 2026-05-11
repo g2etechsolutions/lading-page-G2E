@@ -52,7 +52,7 @@ export default function HeroSection() {
                 className="w-full h-full object-cover opacity-60 mix-blend-screen"
               />
               <div className="absolute top-10 right-10 z-20 glass-panel p-4 rounded-lg animate-pulse">
-                <Icon name="trending_up" fill className="text-tertiary text-3xl" />
+                <Icon name="trending_up" className="text-tertiary" size={30} />
               </div>
               <div className="absolute bottom-20 left-10 z-20 glass-panel p-4 rounded-lg">
                 <div className="h-2 w-24 bg-tertiary/30 rounded overflow-hidden">
