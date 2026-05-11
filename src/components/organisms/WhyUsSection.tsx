@@ -1,5 +1,5 @@
+import Image from 'next/image'
 import WhyUsItem from '@/components/molecules/WhyUsItem'
-import DashboardVisual from '@/components/molecules/DashboardVisual'
 
 const items = [
   {
@@ -39,9 +39,33 @@ export default function WhyUsSection() {
           </ul>
         </div>
 
+        {/* Brand image */}
         <div className="relative">
-          <div className="absolute inset-0 bg-secondary/20 blur-[80px] rounded-full" />
-          <DashboardVisual />
+          {/* Glow behind image */}
+          <div className="absolute inset-0 bg-primary/15 blur-[60px] rounded-full scale-75" />
+
+          <div className="relative rounded-2xl overflow-hidden border border-primary/20 shadow-glow">
+            {/* Gradient overlay for blend */}
+            <div className="absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-transparent z-10 pointer-events-none" />
+            <div className="absolute inset-0 bg-gradient-to-r from-background/30 to-transparent z-10 pointer-events-none" />
+
+            <Image
+              src="/hero.png"
+              alt="Equipe G2E Tech Solutions — Tecnologia com visão de negócio"
+              width={640}
+              height={400}
+              className="w-full h-auto object-cover"
+              priority={false}
+            />
+
+            {/* Bottom badge */}
+            <div className="absolute bottom-4 left-4 z-20 glass-card px-4 py-2.5 rounded-xl border border-primary/30">
+              <div className="flex items-center gap-2">
+                <div className="w-2 h-2 rounded-full bg-success animate-pulse" />
+                <span className="text-xs font-semibold text-on-background">Parceiro estratégico do seu negócio</span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>

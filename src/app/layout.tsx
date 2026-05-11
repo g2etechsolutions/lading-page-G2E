@@ -2,8 +2,8 @@ import type { Metadata } from 'next'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'G2E Tech Solutions — Transforme Seu Negócio com Tecnologia de Verdade',
-  description: 'Soluções em Nuvem, E-commerce, Infraestrutura e Chatbots com IA sob medida para empresas que querem evoluir.',
+  title: 'G2E Tech Solutions — Transformamos negócios com dados, estratégia e tecnologia',
+  description: 'Inovação, inteligência de dados e automação estratégica para empresas que constroem o futuro com escalabilidade real.',
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

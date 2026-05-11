@@ -14,18 +14,18 @@ export default function HeroSection() {
         {/* Left: Copy */}
         <div>
           {/* Badge */}
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-primary/30 bg-primary/5 text-xs text-primary mb-6">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-primary/30 bg-primary/5 text-xs font-semibold text-primary mb-6 tracking-widest uppercase">
             <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse" />
-            Estratégia · Inovação · Tecnologia
+            Dados · Estratégia · Tecnologia
           </div>
 
-          <h1 className="font-display text-4xl md:text-6xl font-bold tracking-tight leading-[1.05]">
-            Transforme Seu Negócio com{' '}
-            <GradientText>Tecnologia de Verdade</GradientText>
+          <h1 className="font-display text-4xl md:text-6xl font-bold tracking-tight leading-[1.08]">
+            Transformamos negócios com{' '}
+            <GradientText>dados, estratégia e tecnologia</GradientText>
           </h1>
 
-          <p className="mt-6 text-lg text-primary/90 max-w-xl">
-            Soluções em Nuvem, E-commerce, Infraestrutura e Chatbots com IA — sob medida para empresas que querem evoluir.
+          <p className="mt-6 text-lg text-on-surface max-w-xl leading-relaxed">
+            Inovação, inteligência de dados e automação estratégica para empresas que constroem o futuro — com escalabilidade real.
           </p>
 
           {/* CTAs */}
