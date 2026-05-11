@@ -6,35 +6,38 @@ const services = [
     icon: 'cloud',
     title: 'Soluções em Nuvem',
     description:
-      'Arquitetura escalável e resiliente em AWS e Azure, otimizando custos e garantindo alta disponibilidade para operações críticas.',
+      'AWS, Azure e GCP. Migração, escalabilidade e redução de custos com arquitetura cloud-native.',
   },
   {
     icon: 'shopping_cart',
     title: 'E-commerce',
     description:
-      'Plataformas de alta performance construídas para conversão, com integrações robustas e experiências de usuário fluidas.',
+      'Lojas digitais de alta performance com integração de pagamento, logística e CRM.',
   },
   {
     icon: 'dns',
     title: 'Infraestrutura Web',
     description:
-      'Segurança 24/7 e gestão de servidores, garantindo que seu ecossistema digital permaneça rápido, seguro e online.',
+      'Servidores, redes, segurança e monitoramento 24/7 para operações sempre no ar.',
   },
   {
     icon: 'smart_toy',
     title: 'Chatbots com IA',
     description:
-      'Automação inteligente de atendimento via WhatsApp e Web, reduzindo custos operacionais e melhorando a satisfação do cliente.',
+      'Atendimento automatizado inteligente para WhatsApp, site e aplicativos.',
   },
 ]
 
 export default function SolutionsSection() {
   return (
-    <section className="py-24 relative overflow-hidden">
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-secondary-container/10 rounded-full blur-[120px] pointer-events-none" />
-      <div className="w-full max-w-[1440px] mx-auto px-margin-desktop relative z-10">
-        <SectionHeading>O Que Entregamos</SectionHeading>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+    <section id="solucoes" className="relative py-24 md:py-32">
+      <div className="mx-auto max-w-7xl px-6">
+        <SectionHeading label="O que entregamos">
+          Soluções completas para{' '}
+          <span className="text-gradient-brand">cada etapa da sua jornada</span>
+        </SectionHeading>
+
+        <div className="grid md:grid-cols-2 gap-6">
           {services.map((service) => (
             <ServiceCard key={service.title} {...service} />
           ))}

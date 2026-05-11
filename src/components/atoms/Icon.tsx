@@ -19,6 +19,12 @@ import Storefront from '@mui/icons-material/Storefront'
 import HealthAndSafety from '@mui/icons-material/HealthAndSafety'
 import LocalShipping from '@mui/icons-material/LocalShipping'
 import AccountBalance from '@mui/icons-material/AccountBalance'
+import CheckCircle from '@mui/icons-material/CheckCircle'
+import ArrowForward from '@mui/icons-material/ArrowForward'
+import Star from '@mui/icons-material/Star'
+import Bolt from '@mui/icons-material/Bolt'
+import Verified from '@mui/icons-material/Verified'
+import AutoAwesome from '@mui/icons-material/AutoAwesome'
 
 const iconMap = {
   cloud: Cloud,
@@ -40,6 +46,12 @@ const iconMap = {
   health_and_safety: HealthAndSafety,
   local_shipping: LocalShipping,
   account_balance: AccountBalance,
+  check_circle: CheckCircle,
+  arrow_forward: ArrowForward,
+  star: Star,
+  bolt: Bolt,
+  verified: Verified,
+  auto_awesome: AutoAwesome,
 } as const
 
 type IconName = keyof typeof iconMap
@@ -47,7 +59,6 @@ type IconName = keyof typeof iconMap
 interface IconProps {
   name: string
   className?: string
-  fill?: boolean
   size?: number
 }
 

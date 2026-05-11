@@ -1,66 +1,63 @@
-import Image from 'next/image'
 import Button from '@/components/atoms/Button'
-import GlassPanel from '@/components/atoms/GlassPanel'
 import GradientText from '@/components/atoms/GradientText'
-import Icon from '@/components/atoms/Icon'
+import CityVisual from '@/components/molecules/CityVisual'
 
 export default function HeroSection() {
   return (
-    <section className="relative min-h-screen flex items-center pt-32 pb-24 overflow-hidden bg-mesh">
-      <div className="absolute inset-0 z-0 opacity-20 pointer-events-none">
-        <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
-          <defs>
-            <pattern height="40" id="grid" patternUnits="userSpaceOnUse" width="40">
-              <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#68d3ff" strokeWidth="0.5" />
-            </pattern>
-          </defs>
-          <rect fill="url(#grid)" height="100%" width="100%" />
-        </svg>
-      </div>
+    <section className="relative overflow-hidden pt-32 pb-24 md:pt-40 md:pb-32">
+      {/* Background effects */}
+      <div className="absolute inset-0 mesh-grid opacity-60" />
+      <div className="absolute inset-0 particles-bg opacity-70" />
+      <div className="absolute -top-40 left-1/2 -translate-x-1/2 w-[800px] h-[800px] rounded-full bg-secondary/20 blur-[120px]" />
 
-      <div className="w-full max-w-[1440px] mx-auto px-margin-desktop relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <div className="space-y-8">
-            <h1 className="font-display-xl text-display-xl text-on-background leading-tight">
-              Transforme Seu Negócio com{' '}
-              <GradientText glow>Tecnologia de Verdade</GradientText>
-            </h1>
-            <p className="font-body-md text-headline-lg-mobile text-tertiary max-w-2xl">
-              Soluções em Nuvem, E-commerce, Infraestrutura e Chatbots com IA.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 pt-4">
-              <Button
-                variant="primary"
-                className="px-8 py-4 shadow-[0_0_20px_rgba(104,211,255,0.2)]"
-              >
-                Fale com um Especialista
-              </Button>
-              <Button variant="outline" className="px-8 py-4">
-                Conheça Nossas Soluções
-              </Button>
-            </div>
+      <div className="relative mx-auto max-w-7xl px-6 grid lg:grid-cols-2 gap-12 items-center">
+        {/* Left: Copy */}
+        <div>
+          {/* Badge */}
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-primary/30 bg-primary/5 text-xs text-primary mb-6">
+            <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse" />
+            Estratégia · Inovação · Tecnologia
           </div>
 
-          <div className="relative h-[600px] w-full hidden lg:block">
-            <GlassPanel className="absolute inset-0 rounded-xl overflow-hidden flex items-center justify-center group relative">
-              <div className="absolute inset-0 bg-gradient-to-tr from-surface-container-lowest/80 to-transparent z-10 pointer-events-none" />
-              <Image
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCwPX9DOloZ4RqenhASb9FjqdmP1OP0e8DFzAUBmXST0mkqoDfnN-499cnZQ16kIMfCt3v38BhNwlwI9at0gmxiv63yGrzdcmFIKbIgm3_YVbRlLi271BH2Pdxd6JZHCo02u6VlW1DtArn42qaEQ7acAZ1nsVXIDlO5EIUtOjmrddV4inw5oN_ElSyOqXxE3w5C1RtXmy-1M6bF2uJ8gvwa1r8XCNr2KYvurZS-sEJB01YE9KigZFv1JJCfdOtt68LTOL2EOuNdhRI"
-                alt="3D holographic data grid"
-                width={800}
-                height={600}
-                className="w-full h-full object-cover opacity-60 mix-blend-screen"
-              />
-              <div className="absolute top-10 right-10 z-20 glass-panel p-4 rounded-lg animate-pulse">
-                <Icon name="trending_up" className="text-tertiary" size={30} />
-              </div>
-              <div className="absolute bottom-20 left-10 z-20 glass-panel p-4 rounded-lg">
-                <div className="h-2 w-24 bg-tertiary/30 rounded overflow-hidden">
-                  <div className="h-full w-3/4 bg-tertiary rounded" />
-                </div>
-              </div>
-            </GlassPanel>
+          <h1 className="font-display text-4xl md:text-6xl font-bold tracking-tight leading-[1.05]">
+            Transforme Seu Negócio com{' '}
+            <GradientText>Tecnologia de Verdade</GradientText>
+          </h1>
+
+          <p className="mt-6 text-lg text-primary/90 max-w-xl">
+            Soluções em Nuvem, E-commerce, Infraestrutura e Chatbots com IA — sob medida para empresas que querem evoluir.
+          </p>
+
+          {/* CTAs */}
+          <div className="mt-10 flex flex-wrap gap-4">
+            <Button variant="cta" href="#contato">
+              Fale com um Especialista →
+            </Button>
+            <Button variant="outline" href="#solucoes">
+              Conheça Nossas Soluções
+            </Button>
           </div>
+
+          {/* Stats */}
+          <div className="mt-12 grid grid-cols-3 gap-6 max-w-md">
+            {[
+              { value: '+120', label: 'Projetos entregues' },
+              { value: '98%', label: 'Clientes satisfeitos' },
+              { value: '24/7', label: 'Suporte contínuo' },
+            ].map((stat) => (
+              <div key={stat.label}>
+                <div className="text-2xl font-bold text-gradient-brand">{stat.value}</div>
+                <div className="text-xs text-on-surface-muted mt-1">{stat.label}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Right: City Visual */}
+        <div className="relative animate-float">
+          {/* Glow behind */}
+          <div className="absolute inset-0 bg-primary/15 blur-[80px] rounded-full" />
+          <CityVisual />
         </div>
       </div>
     </section>

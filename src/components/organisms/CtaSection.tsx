@@ -1,23 +1,27 @@
 import Button from '@/components/atoms/Button'
+import Icon from '@/components/atoms/Icon'
 
 export default function CtaSection() {
   return (
-    <section className="py-24 relative overflow-hidden bg-gradient-to-br from-primary-container via-surface to-surface-container-high">
-      <div className="absolute inset-0 bg-mesh opacity-50" />
-      <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-tertiary/30 to-transparent" />
-      <div className="w-full max-w-[1440px] mx-auto px-margin-desktop relative z-10 text-center">
-        <h2 className="font-display-xl text-headline-lg text-on-background mb-8 glow-text">
-          Pronto para Evoluir?
+    <section id="contato" className="relative py-24 md:py-32 overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-cta" />
+      <div className="absolute inset-0 mesh-grid opacity-40" />
+      <div className="absolute -bottom-20 left-1/2 -translate-x-1/2 w-[600px] h-[600px] rounded-full bg-primary/20 blur-[120px]" />
+
+      <div className="relative mx-auto max-w-3xl px-6 text-center">
+        <h2 className="text-3xl md:text-5xl font-bold tracking-tight">
+          Vamos conversar sobre o{' '}
+          <span className="text-gradient-brand">futuro do seu negócio</span>
         </h2>
-        <p className="font-body-md text-xl text-on-surface-variant mb-10 max-w-2xl mx-auto">
-          Dê o próximo passo na transformação digital da sua empresa. Fale com nossos especialistas.
+        <p className="mt-6 text-lg text-on-surface-muted">
+          Consultoria inicial gratuita. Sem compromisso.
         </p>
-        <Button
-          variant="primary"
-          className="px-10 py-5 shadow-[0_0_30px_rgba(104,211,255,0.3)] hover:shadow-[0_0_40px_rgba(104,211,255,0.5)]"
-        >
-          Agendar Diagnóstico Gratuito
-        </Button>
+        <div className="mt-10">
+          <Button variant="cta" href="#contato" className="px-12 py-5 text-lg">
+            <Icon name="auto_awesome" size={20} />
+            Agendar Diagnóstico Gratuito
+          </Button>
+        </div>
       </div>
     </section>
   )

@@ -1,26 +1,34 @@
-type ButtonVariant = 'primary' | 'outline'
+type ButtonVariant = 'cta' | 'primary' | 'outline' | 'ghost'
 
 interface ButtonProps {
   variant?: ButtonVariant
   children: React.ReactNode
   className?: string
+  href?: string
 }
 
-export default function Button({ variant = 'primary', children, className = '' }: ButtonProps) {
-  if (variant === 'outline') {
+export default function Button({ variant = 'cta', children, className = '', href }: ButtonProps) {
+  const baseClasses = 'inline-flex items-center justify-center gap-2 font-display font-semibold tracking-wide transition-all duration-300 cursor-pointer'
+
+  const variants: Record<ButtonVariant, string> = {
+    cta: 'btn-hero px-8 py-4 text-base hover:btn-hero-hover hover:-translate-y-0.5 active:translate-y-0',
+    primary: 'bg-primary text-background px-7 py-3.5 rounded-md hover:bg-primary-light hover:shadow-glow active:scale-[0.98]',
+    outline: 'bg-primary/5 border border-primary/40 text-primary px-7 py-3.5 rounded-xl hover:bg-primary/10 hover:border-primary transition-all',
+    ghost: 'text-on-surface-muted px-4 py-2 rounded-md hover:text-on-background hover:bg-surface-elevated',
+  }
+
+  const classes = `${baseClasses} ${variants[variant]} ${className}`
+
+  if (href) {
     return (
-      <button
-        className={`bg-transparent border border-tertiary text-tertiary px-8 py-4 rounded font-label-caps text-label-caps uppercase tracking-wider hover:bg-tertiary/10 transition-all duration-300 ${className}`}
-      >
+      <a href={href} className={classes}>
         {children}
-      </button>
+      </a>
     )
   }
 
   return (
-    <button
-      className={`bg-gradient-to-r from-secondary-container to-tertiary text-on-background px-6 py-3 rounded font-label-caps text-label-caps uppercase tracking-wider hover:brightness-110 transition-all duration-300 ${className}`}
-    >
+    <button className={classes}>
       {children}
     </button>
   )

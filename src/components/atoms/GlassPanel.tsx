@@ -1,12 +1,12 @@
 interface GlassPanelProps {
   children: React.ReactNode
   className?: string
-  active?: boolean
+  hover?: boolean
 }
 
-export default function GlassPanel({ children, className = '', active = false }: GlassPanelProps) {
+export default function GlassPanel({ children, className = '', hover = true }: GlassPanelProps) {
   return (
-    <div className={`${active ? 'glass-panel-active' : 'glass-panel'} ${className}`}>
+    <div className={`glass-card ${hover ? 'hover:glass-card-hover' : ''} ${className}`}>
       {children}
     </div>
   )

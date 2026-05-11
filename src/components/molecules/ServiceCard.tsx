@@ -1,20 +1,24 @@
-import GlassPanel from '@/components/atoms/GlassPanel'
 import Icon from '@/components/atoms/Icon'
 
 interface ServiceCardProps {
   icon: string
   title: string
   description: string
+  highlight?: string
 }
 
 export default function ServiceCard({ icon, title, description }: ServiceCardProps) {
   return (
-    <GlassPanel className="p-8 rounded-xl group hover:glass-panel-active transition-all duration-300">
-      <div className="w-14 h-14 rounded-lg bg-surface-variant flex items-center justify-center mb-6 group-hover:bg-tertiary/20 transition-colors">
-        <Icon name={icon} className="text-tertiary" size={30} />
+    <div className="glass-card hover:glass-card-hover group rounded-2xl p-8">
+      <div className="w-14 h-14 rounded-xl border border-primary/40 bg-primary/5 flex items-center justify-center mb-6 group-hover:shadow-glow transition-all">
+        <Icon name={icon} className="text-primary" size={26} />
       </div>
-      <h3 className="font-headline-lg-mobile text-headline-lg-mobile text-on-background mb-4">{title}</h3>
-      <p className="font-body-md text-body-md text-on-surface-variant">{description}</p>
-    </GlassPanel>
+      <h3 className="text-xl font-bold text-on-background mb-3">{title}</h3>
+      <p className="text-on-surface-muted leading-relaxed mb-6">{description}</p>
+      <a href="#contato" className="inline-flex items-center gap-2 text-primary text-sm font-medium hover:gap-3 transition-all">
+        Saiba mais
+        <Icon name="arrow_forward" size={16} />
+      </a>
+    </div>
   )
 }

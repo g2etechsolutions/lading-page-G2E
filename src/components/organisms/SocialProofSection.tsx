@@ -1,24 +1,19 @@
-import Icon from '@/components/atoms/Icon'
-
-const industries = [
-  { icon: 'storefront', label: 'Varejo' },
-  { icon: 'health_and_safety', label: 'Saúde' },
-  { icon: 'local_shipping', label: 'Logística' },
-  { icon: 'account_balance', label: 'Finanças' },
-]
+const sectors = ['Varejo', 'Saúde', 'Logística', 'Finanças', 'Indústria']
 
 export default function SocialProofSection() {
   return (
-    <section className="py-12 bg-surface-container-lowest border-y border-outline-variant/10">
-      <div className="w-full max-w-[1440px] mx-auto px-margin-desktop">
-        <p className="font-label-caps text-label-caps text-on-surface-variant text-center uppercase tracking-widest mb-8">
+    <section className="relative py-12 border-y border-white/5 bg-surface-card/30">
+      <div className="mx-auto max-w-7xl px-6">
+        <p className="text-center text-xs uppercase tracking-[0.2em] text-on-surface-muted mb-8">
           Empresas que já evoluíram com a G2E
         </p>
-        <div className="flex flex-wrap justify-center items-center gap-12 md:gap-24 opacity-60 grayscale hover:grayscale-0 transition-all duration-500">
-          {industries.map(({ icon, label }) => (
-            <div key={label} className="flex items-center gap-2 text-xl font-display-xl font-bold">
-              <Icon name={icon} />
-              {label}
+        <div className="flex flex-wrap items-center justify-center gap-x-12 gap-y-4">
+          {sectors.map((s) => (
+            <div
+              key={s}
+              className="text-lg md:text-xl font-semibold text-on-surface-muted/60 hover:text-primary transition-colors tracking-wide"
+            >
+              {s}
             </div>
           ))}
         </div>
