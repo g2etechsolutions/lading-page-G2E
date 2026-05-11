@@ -1,3 +1,5 @@
+import Image from 'next/image'
+
 const legalLinks = [
   { label: 'Privacidade', href: '#' },
   { label: 'Termos de Uso', href: '#' },
@@ -12,8 +14,14 @@ export default function FooterSection() {
   return (
     <footer className="w-full px-margin-desktop py-12 flex flex-col md:flex-row justify-between items-start gap-gutter bg-surface-container-lowest border-t border-outline-variant/10">
       <div className="flex flex-col gap-4">
-        <div className="font-display-xl text-headline-lg text-on-surface tracking-tight">
-          G2E Tech Solutions
+        <div className="bg-white rounded-lg px-3 py-2 self-start">
+          <Image
+            src="/logo.png"
+            alt="G2E Tech Solutions"
+            width={110}
+            height={36}
+            className="h-10 w-auto object-contain"
+          />
         </div>
         <p className="font-body-sm text-body-sm text-on-surface-variant max-w-sm">
           Arquitetando Inteligência. Soluções B2B escaláveis para o futuro do seu negócio.
