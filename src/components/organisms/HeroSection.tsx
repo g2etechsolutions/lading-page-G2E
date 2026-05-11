@@ -53,7 +53,7 @@ export default function HeroSection() {
             transition={{ duration: 0.5, delay: 0.6 }}
             className="mt-8 md:mt-10 flex flex-col sm:flex-row gap-3 sm:gap-4"
           >
-            <Button variant="cta" href="#contato" className="w-full sm:w-auto text-center">
+            <Button variant="cta" href="https://wa.me/5577981309491?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20G2E%20e%20gostaria%20de%20saber%20mais%20sobre%20as%20solu%C3%A7%C3%B5es%20de%20voc%C3%AAs." className="w-full sm:w-auto text-center">
               Fale com um Especialista →
             </Button>
             <Button variant="outline" href="#solucoes" className="w-full sm:w-auto text-center">

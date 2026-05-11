@@ -6,6 +6,7 @@ import WhyUsSection from '@/components/organisms/WhyUsSection'
 import ProcessSection from '@/components/organisms/ProcessSection'
 import CtaSection from '@/components/organisms/CtaSection'
 import FooterSection from '@/components/organisms/FooterSection'
+import WhatsAppButton from '@/components/atoms/WhatsAppButton'
 
 export default function LandingTemplate() {
   return (
@@ -20,6 +21,7 @@ export default function LandingTemplate() {
         <CtaSection />
       </main>
       <FooterSection />
+      <WhatsAppButton />
     </>
   )
 }

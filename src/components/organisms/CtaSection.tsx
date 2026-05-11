@@ -4,7 +4,12 @@ import { motion } from 'framer-motion'
 import ScrollReveal from '@/components/atoms/ScrollReveal'
 import Icon from '@/components/atoms/Icon'
 
+const WHATSAPP_NUMBER = '5577981309491'
+const WHATSAPP_MESSAGE = 'Olá! Gostaria de agendar um diagnóstico gratuito para minha empresa.'
+
 export default function CtaSection() {
+  const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`
+
   return (
     <section id="contato" className="relative py-16 md:py-32 overflow-hidden">
       <div className="mx-auto max-w-5xl px-4 md:px-6">
@@ -35,18 +40,36 @@ export default function CtaSection() {
                 <span className="text-primary-light">futuro do seu negócio</span>
               </h2>
               <p className="mt-4 md:mt-6 text-base md:text-lg text-white/80 max-w-xl mx-auto">
-                Consultoria inicial gratuita. Sem compromisso.
+                Consultoria inicial gratuita. Sem compromisso. Resposta em até 24h.
               </p>
-              <div className="mt-8 md:mt-10">
+              <div className="mt-8 md:mt-10 flex flex-col sm:flex-row gap-3 justify-center items-center">
                 <motion.a
-                  href="#contato"
+                  href={whatsappUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   whileHover={{ scale: 1.05, y: -2 }}
                   whileTap={{ scale: 0.98 }}
-                  className="inline-flex items-center justify-center gap-2 bg-white text-secondary font-display font-semibold px-8 py-3.5 md:px-10 md:py-4 rounded-xl text-sm md:text-base shadow-lg cursor-pointer"
+                  className="inline-flex items-center justify-center gap-2 bg-white text-secondary font-display font-semibold px-8 py-3.5 md:px-10 md:py-4 rounded-xl text-sm md:text-base shadow-lg cursor-pointer w-full sm:w-auto"
                 >
                   <Icon name="auto_awesome" size={18} />
                   Agendar Diagnóstico Gratuito
                 </motion.a>
+              </div>
+
+              {/* Trust signals */}
+              <div className="mt-8 flex flex-wrap justify-center gap-x-6 gap-y-2 text-white/60 text-xs">
+                <span className="flex items-center gap-1.5">
+                  <Icon name="verified" size={14} className="text-primary-light" />
+                  Sem compromisso
+                </span>
+                <span className="flex items-center gap-1.5">
+                  <Icon name="bolt" size={14} className="text-primary-light" />
+                  Resposta em 24h
+                </span>
+                <span className="flex items-center gap-1.5">
+                  <Icon name="security" size={14} className="text-primary-light" />
+                  Dados protegidos
+                </span>
               </div>
             </div>
           </div>
