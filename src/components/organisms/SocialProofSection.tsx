@@ -7,7 +7,7 @@ const sectors = ['Varejo', 'Saúde', 'Logística', 'Finanças', 'Indústria']
 export default function SocialProofSection() {
   return (
     <section className="relative py-12 border-y border-border bg-surface/50">
-      <div className="mx-auto max-w-7xl px-6">
+      <div className="mx-auto max-w-7xl px-5 md:px-6">
         <ScrollReveal>
           <p className="text-center text-xs uppercase tracking-[0.2em] text-on-surface-muted mb-8">
             Empresas que já evoluíram com a G2E

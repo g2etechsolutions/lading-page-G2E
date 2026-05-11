@@ -34,11 +34,11 @@ const steps = [
 
 export default function ProcessSection() {
   return (
-    <section id="processo" className="relative py-24 md:py-32 overflow-hidden">
+    <section id="processo" className="relative py-16 md:py-32 overflow-hidden">
       <div className="absolute inset-0 mesh-grid opacity-30" />
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-secondary/10 blur-[120px]" />
 
-      <div className="relative mx-auto max-w-7xl px-6">
+      <div className="relative mx-auto max-w-7xl px-5 md:px-6">
         <ScrollReveal>
           <SectionHeading label="Como trabalhamos">
             Um processo claro, do{' '}

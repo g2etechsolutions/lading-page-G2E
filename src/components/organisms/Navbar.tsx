@@ -25,14 +25,14 @@ export default function Navbar() {
 
   return (
     <header className="fixed top-0 inset-x-0 z-50 border-b border-border bg-background/70 backdrop-blur-xl">
-      <div className="mx-auto max-w-7xl px-6 h-16 flex items-center justify-between">
-        {/* Logo — switches based on theme */}
+      <div className="mx-auto max-w-7xl px-4 md:px-6 h-14 md:h-16 flex items-center justify-between">
+        {/* Logo */}
         <Image
           src={logoSrc}
           alt="G2E Tech Solutions"
-          width={120}
-          height={40}
-          className="h-9 w-auto object-contain"
+          width={100}
+          height={32}
+          className="h-7 md:h-9 w-auto object-contain"
           priority
         />
 
@@ -61,14 +61,14 @@ export default function Navbar() {
 
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="relative w-10 h-10 flex items-center justify-center rounded-lg border border-border bg-surface-elevated text-on-surface-muted hover:text-primary hover:border-border-hover transition-all"
+            className="relative w-9 h-9 flex items-center justify-center rounded-lg border border-border bg-surface-elevated text-on-surface-muted hover:text-primary hover:border-border-hover transition-all"
             aria-label={isOpen ? 'Fechar menu' : 'Abrir menu'}
             aria-expanded={isOpen}
           >
-            <div className="w-5 h-4 flex flex-col justify-between">
+            <div className="w-4.5 h-3.5 flex flex-col justify-between">
               <span
                 className={`block h-0.5 w-full bg-current rounded-full transition-all duration-300 origin-center ${
-                  isOpen ? 'rotate-45 translate-y-[7px]' : ''
+                  isOpen ? 'rotate-45 translate-y-[6px]' : ''
                 }`}
               />
               <span
@@ -78,7 +78,7 @@ export default function Navbar() {
               />
               <span
                 className={`block h-0.5 w-full bg-current rounded-full transition-all duration-300 origin-center ${
-                  isOpen ? '-rotate-45 -translate-y-[7px]' : ''
+                  isOpen ? '-rotate-45 -translate-y-[6px]' : ''
                 }`}
               />
             </div>
@@ -92,8 +92,8 @@ export default function Navbar() {
           isOpen ? 'max-h-[400px] opacity-100' : 'max-h-0 opacity-0'
         }`}
       >
-        <nav className="px-6 pb-6 pt-2 border-t border-border bg-background/95 backdrop-blur-2xl">
-          <ul className="flex flex-col gap-1">
+        <nav className="px-4 pb-5 pt-2 border-t border-border bg-background/95 backdrop-blur-2xl">
+          <ul className="flex flex-col gap-0.5">
             {links.map((link) => (
               <li key={link.href}>
                 <a
@@ -107,8 +107,8 @@ export default function Navbar() {
             ))}
           </ul>
 
-          <div className="mt-4 pt-4 border-t border-border">
-            <Button variant="cta" href="#contato" className="w-full justify-center py-3.5 text-sm">
+          <div className="mt-3 pt-3 border-t border-border">
+            <Button variant="cta" href="#contato" className="w-full justify-center py-3 text-sm">
               Agendar Diagnóstico
             </Button>
           </div>

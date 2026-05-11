@@ -34,8 +34,8 @@ const services = [
 
 export default function SolutionsSection() {
   return (
-    <section id="solucoes" className="relative py-24 md:py-32">
-      <div className="mx-auto max-w-7xl px-6">
+    <section id="solucoes" className="relative py-16 md:py-32">
+      <div className="mx-auto max-w-7xl px-5 md:px-6">
         <ScrollReveal>
           <SectionHeading label="O que entregamos">
             Soluções completas para{' '}

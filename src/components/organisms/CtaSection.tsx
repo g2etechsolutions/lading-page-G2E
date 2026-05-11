@@ -6,10 +6,10 @@ import Icon from '@/components/atoms/Icon'
 
 export default function CtaSection() {
   return (
-    <section id="contato" className="relative py-24 md:py-32 overflow-hidden">
-      <div className="mx-auto max-w-5xl px-6">
+    <section id="contato" className="relative py-16 md:py-32 overflow-hidden">
+      <div className="mx-auto max-w-5xl px-4 md:px-6">
         <ScrollReveal direction="up">
-          <div className="relative rounded-3xl overflow-hidden px-8 py-16 md:px-16 md:py-20 text-center">
+          <div className="relative rounded-2xl md:rounded-3xl overflow-hidden px-6 py-12 md:px-16 md:py-20 text-center">
             {/* Background */}
             <div className="absolute inset-0 bg-gradient-to-br from-secondary via-secondary-light to-primary opacity-95" />
 
@@ -26,25 +26,25 @@ export default function CtaSection() {
             </div>
 
             {/* Glow orb */}
-            <div className="absolute -bottom-20 left-1/2 -translate-x-1/2 w-[400px] h-[400px] rounded-full bg-primary/30 blur-[100px]" />
+            <div className="absolute -bottom-20 left-1/2 -translate-x-1/2 w-[300px] md:w-[400px] h-[300px] md:h-[400px] rounded-full bg-primary/30 blur-[100px]" />
 
             {/* Content */}
             <div className="relative z-10">
-              <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-white">
+              <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold tracking-tight text-white">
                 Vamos conversar sobre o{' '}
                 <span className="text-primary-light">futuro do seu negócio</span>
               </h2>
-              <p className="mt-6 text-lg text-white/80 max-w-xl mx-auto">
+              <p className="mt-4 md:mt-6 text-base md:text-lg text-white/80 max-w-xl mx-auto">
                 Consultoria inicial gratuita. Sem compromisso.
               </p>
-              <div className="mt-10">
+              <div className="mt-8 md:mt-10">
                 <motion.a
                   href="#contato"
                   whileHover={{ scale: 1.05, y: -2 }}
                   whileTap={{ scale: 0.98 }}
-                  className="inline-flex items-center justify-center gap-2 bg-white text-secondary font-display font-semibold px-10 py-4 rounded-xl text-base shadow-lg cursor-pointer"
+                  className="inline-flex items-center justify-center gap-2 bg-white text-secondary font-display font-semibold px-8 py-3.5 md:px-10 md:py-4 rounded-xl text-sm md:text-base shadow-lg cursor-pointer"
                 >
-                  <Icon name="auto_awesome" size={20} />
+                  <Icon name="auto_awesome" size={18} />
                   Agendar Diagnóstico Gratuito
                 </motion.a>
               </div>

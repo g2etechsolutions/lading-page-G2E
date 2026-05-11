@@ -10,7 +10,9 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="pt-BR" suppressHydrationWarning>
-      <head />
+      <head>
+        <link rel="icon" href="/logo.png" type="image/png" />
+      </head>
       <body className="bg-background text-on-background font-body antialiased min-h-screen" suppressHydrationWarning>
         <ThemeProvider
           attribute="class"
