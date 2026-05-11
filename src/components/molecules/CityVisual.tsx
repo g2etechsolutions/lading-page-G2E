@@ -11,7 +11,7 @@ export default function CityVisual() {
       {/* SVG Illustration */}
       <svg
         viewBox="0 0 600 500"
-        className="relative z-10 w-full h-full animate-glow-pulse"
+        className="relative z-10 w-full h-full animate-glow-pulse text-primary"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >

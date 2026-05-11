@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { ThemeProvider } from '@/components/atoms/ThemeProvider'
 import './globals.css'
 
 export const metadata: Metadata = {
@@ -8,9 +9,16 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="pt-BR" className="dark">
-      <body className="bg-background text-on-background font-body antialiased min-h-screen">
-        {children}
+    <html lang="pt-BR" suppressHydrationWarning>
+      <body className="bg-background text-on-background font-body antialiased min-h-screen transition-colors duration-300">
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="light"
+          enableSystem
+          disableTransitionOnChange={false}
+        >
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   )

@@ -24,7 +24,7 @@ const items = [
 
 export default function WhyUsSection() {
   return (
-    <section id="diferenciais" className="relative py-24 md:py-32 border-y border-white/5">
+    <section id="diferenciais" className="relative py-24 md:py-32 border-y border-border">
       <div className="mx-auto max-w-7xl px-6 grid lg:grid-cols-2 gap-16 items-center">
         <div>
           <p className="text-xs uppercase tracking-[0.2em] text-primary mb-4">Por que a G2E?</p>
