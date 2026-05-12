@@ -27,7 +27,8 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
-  const logoSrc = mounted && resolvedTheme === 'dark' ? '/logotipobranco.png' : '/logo.png'
+  const base = process.env.NEXT_PUBLIC_BASE_PATH ?? ''
+  const logoSrc = mounted && resolvedTheme === 'dark' ? `${base}/logotipobranco.png` : `${base}/logo.png`
 
   return (
     <header

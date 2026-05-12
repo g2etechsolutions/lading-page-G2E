@@ -10,7 +10,8 @@ export default function FooterSection() {
 
   useEffect(() => setMounted(true), [])
 
-  const logoSrc = mounted && resolvedTheme === 'dark' ? '/logotipobranco.png' : '/logo.png'
+  const base = process.env.NEXT_PUBLIC_BASE_PATH ?? ''
+  const logoSrc = mounted && resolvedTheme === 'dark' ? `${base}/logotipobranco.png` : `${base}/logo.png`
 
   return (
     <footer className="relative border-t border-border bg-surface/50 py-10 md:py-12">

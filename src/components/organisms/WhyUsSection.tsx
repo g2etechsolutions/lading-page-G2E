@@ -61,7 +61,7 @@ export default function WhyUsSection() {
               <div className="absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-transparent z-10 pointer-events-none" />
 
               <Image
-                src="/hero.png"
+                src={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ''}/hero.png`}
                 alt="Equipe G2E Tech Solutions — Tecnologia com visão de negócio"
                 width={640}
                 height={400}
