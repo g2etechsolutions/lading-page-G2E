@@ -2,11 +2,13 @@ import type { Metadata } from 'next'
 import { ThemeProvider } from '@/components/atoms/ThemeProvider'
 import './globals.css'
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? '';
+
 export const metadata: Metadata = {
   title: 'G2E Tech Solutions — Transformamos negócios com dados, estratégia e tecnologia',
   description: 'Inovação, inteligência de dados e automação estratégica para empresas que constroem o futuro com escalabilidade real.',
   icons: {
-    icon: '/logo.png',
+    icon: `${basePath}/logo.png`,
   },
 }
 
